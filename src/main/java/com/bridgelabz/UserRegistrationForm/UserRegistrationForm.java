@@ -23,13 +23,13 @@ public class UserRegistrationForm {
     }
     public static void main(String[] args)
     {
-        String str1="INDIA";
+        String str1="Cap9999@$";
         System.out.println(isValidFirstUsername(str1));
 
-        String str2="MAH56#";
+        String str2="Cap4344$%";
         System.out.println(isValidFirstUsername(str2));
 
-        String str3="DEL357@%";
+        String str3="Cap2314*@";
         System.out.println(isValidFirstUsername(str3));
     }
 }
