@@ -31,4 +31,26 @@ public class UserRegistrationForm {
     //checking mobile number.
         System.out.println(isValidmobilenumber());
     }
+
+    @Test
+    public void isValidPassword() {
+        Pattern pattern = Pattern.compile(".*(?=.{8,})(?=..*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%&+=]).*$");
+        Matcher matcher = pattern.matcher("food");
+    }
+        String password = "food";
+        System.out.println(isValidPassword(password));
+    }
+
+    public static void main(String[] args)
+    {
+        String str1="India";
+        System.out.println(isValidFirstUsername(str1));
+
+        String str2="Cap4344$%";
+        System.out.println(isValidFirstUsername(str2));
+
+        String str3="Cap2314*@";
+        System.out.println(isValidFirstUsername(str3));
+    }
 }
+
