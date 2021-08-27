@@ -43,10 +43,19 @@ public class UserRegistrationForm {
     @Test //at least 1 uppercase:
     public void isValidPassword_uppercase() {
         Pattern pattern = Pattern.compile(".*(?=.{8,})(?=..*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%&+=]).*$");
-        Matcher matcher = pattern.matcher("Gaurya10");
+        Matcher matcher = pattern.matcher("GauriPARH");
 
-        String password_uppercase = "Gaurya10@";
+        String password_uppercase = "GauriPARH";
         System.out.println(isValidPassword(password_uppercase));
         }
+    @Test //Numeric DIGIT IN PASSWORD
+    public void isValidPassword_numericdigit() {
+        Pattern pattern = Pattern.compile(".*(?=.{8,})(?=..*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%&+=]).*$");
+        Matcher matcher = pattern.matcher("Gaurya10");
+
+        String password_numericdigit = "Gaurya10@";
+        System.out.println(isValidPassword(password_numericdigit));
+    }
 }
+
 
