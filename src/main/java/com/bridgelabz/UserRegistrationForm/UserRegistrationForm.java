@@ -3,7 +3,7 @@ import java.util.regex.*;
 
 public class UserRegistrationForm {
 
-    public static boolean isValidFirstUsername(String name)
+    public static boolean isValidlastUsername(String name)
     {
         String regex="^[Cap]\\w{5,29}[A-Za-z]$";
 
@@ -21,15 +21,22 @@ public class UserRegistrationForm {
         //Return if the username
         return m.matches();
     }
-    public static void main(String[] args)
-    {
-        String str1="Cap9999@$";
-        System.out.println(isValidFirstUsername(str1));
+    public static void main(String[] args) {
+        //Checking for lastusername
 
-        String str2="Cap4344$%";
-        System.out.println(isValidFirstUsername(str2));
+        //Test Case:1
+        String str1 = "India";
+        System.out.println(isValidlastUsername(str1));
 
-        String str3="Cap2314*@";
-        System.out.println(isValidFirstUsername(str3));
+        //Test case 2
+        String str2 = "Cap434abc";
+        System.out.println(isValidlastUsername(str2));
+
+        //Test Case:3
+        String str3 = "Cap231xyz";
+        System.out.println(isValidlastUsername(str3));
     }
+
+
+
 }
