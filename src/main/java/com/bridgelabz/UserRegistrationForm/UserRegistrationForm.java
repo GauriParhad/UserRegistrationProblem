@@ -35,22 +35,18 @@ public class UserRegistrationForm {
     @Test
     public void isValidPassword() {
         Pattern pattern = Pattern.compile(".*(?=.{8,})(?=..*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%&+=]).*$");
-        Matcher matcher = pattern.matcher("food");
-    }
-        String password = "food";
+        Matcher matcher = pattern.matcher("foodahkbi");
+
+        String password = "fooddahkbi";
         System.out.println(isValidPassword(password));
     }
+    @Test //at least 1 uppercase:
+    public void isValidPassword_uppercase() {
+        Pattern pattern = Pattern.compile(".*(?=.{8,})(?=..*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%&+=]).*$");
+        Matcher matcher = pattern.matcher("Gaurya10");
 
-    public static void main(String[] args)
-    {
-        String str1="India";
-        System.out.println(isValidFirstUsername(str1));
-
-        String str2="Cap4344$%";
-        System.out.println(isValidFirstUsername(str2));
-
-        String str3="Cap2314*@";
-        System.out.println(isValidFirstUsername(str3));
-    }
+        String password_uppercase = "Gaurya10@";
+        System.out.println(isValidPassword(password_uppercase));
+        }
 }
 
