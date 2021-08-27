@@ -47,15 +47,24 @@ public class UserRegistrationForm {
 
         String password_uppercase = "GauriPARH";
         System.out.println(isValidPassword(password_uppercase));
-        }
+    }
+
     @Test //Numeric DIGIT IN PASSWORD
     public void isValidPassword_numericdigit() {
         Pattern pattern = Pattern.compile(".*(?=.{8,})(?=..*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%&+=]).*$");
         Matcher matcher = pattern.matcher("Gaurya10");
 
-        String password_numericdigit = "Gaurya10@";
+        String password_numericdigit = "Gaurya10";
         System.out.println(isValidPassword(password_numericdigit));
     }
+    @Test //special characters
+    public void isValidPassword_specialcharacter() {
+        Pattern pattern = Pattern.compile(".*(?=.{8,})(?=..*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%&+=]).*$");
+        Matcher matcher = pattern.matcher("Gaurya10@");
+
+        String password_specialcharacter = "Gaurya10@";
+        System.out.println(isValidPassword(password_specialcharacter));
+
 }
 
 
