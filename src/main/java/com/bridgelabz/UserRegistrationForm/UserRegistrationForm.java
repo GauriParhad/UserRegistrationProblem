@@ -3,40 +3,21 @@ import java.util.regex.*;
 
 public class UserRegistrationForm {
 
-    public static boolean isValidlastUsername(String name)
-    {
-        String regex="^[Cap]\\w{5,29}[A-Za-z]$";
+    public static boolean isValidEmail(String name) {
+        String regex = "^[Cap]\\w{5,29}[A-Za-z]$";
 
-        Pattern p=Pattern.compile(regex);
+        Pattern p = Pattern.compile("\\B[A-Z0-9._%-]+@[A-Z0-9.-]+\\.[A-Z]{2,4}\\b");
 
-        if (name ==null){
-            return false;
-        }
+        Matcher m = p.matcher("thegauriparhad@gmail.com");
 
-        //Pattern class contains matcher() method
-        //to find matching between given username
-        //and regular expression
-        Matcher m =p.matcher(name);
+        if (m.find())
+            System.out.println("Correct!");
 
         //Return if the username
         return m.matches();
+
+        //checking Email-Id.
+        String email = "the.gauri@gmail.co.in";
+        System.out.println(isValidEmail(email));
     }
-    public static void main(String[] args) {
-        //Checking for lastusername
-
-        //Test Case:1
-        String str1 = "India";
-        System.out.println(isValidlastUsername(str1));
-
-        //Test case 2
-        String str2 = "Cap434abc";
-        System.out.println(isValidlastUsername(str2));
-
-        //Test Case:3
-        String str3 = "Cap231xyz";
-        System.out.println(isValidlastUsername(str3));
-    }
-
-
-
 }
